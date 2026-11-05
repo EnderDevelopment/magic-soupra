@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elemental Nexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="vfx-canvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="nexus-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><span>ELEMENTAL NEXUS</span></div>
+      <div class="status"><span class="status-dot"></span> NEXUS ONLINE <span class="divider"></span> LEVEL 27</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">THE LIVING CODEX · 07 / 12</div>
+      <h1>Choose your <em>power</em></h1>
+      <p>Shape the forces between worlds. Every element answers to a different part of you.</p>
+    </section>
+
+    <section class="power-grid" aria-label="Power selection">
+      <button class="power-card active" data-power="fire" style="--accent:#ff6b35; --glow:rgba(255,82,32,.42)">
+        <span class="card-icon">♨</span><span class="card-index">01</span><span class="card-name">Fire</span><span class="card-type">Destruction · Ember</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="water" style="--accent:#40bfff; --glow:rgba(30,175,255,.4)">
+        <span class="card-icon">◒</span><span class="card-index">02</span><span class="card-name">Water</span><span class="card-type">Flow · Tide</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="wind" style="--accent:#a8f5e4; --glow:rgba(89,231,192,.35)">
+        <span class="card-icon">≋</span><span class="card-index">03</span><span class="card-name">Wind</span><span class="card-type">Freedom · Gale</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="spirit" style="--accent:#d4a4ff; --glow:rgba(180,105,255,.4)">
+        <span class="card-icon">☼</span><span class="card-index">04</span><span class="card-name">Spirit</span><span class="card-type">Soul · Aura</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="steam" style="--accent:#e9ecf2; --glow:rgba(213,224,238,.35)">
+        <span class="card-icon">◌</span><span class="card-index">05</span><span class="card-name">Steam</span><span class="card-type">Pressure · Mist</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="shadow" style="--accent:#9c7dff; --glow:rgba(104,72,230,.42)">
+        <span class="card-icon">◐</span><span class="card-index">06</span><span class="card-name">Shadow</span><span class="card-type">Void · Silence</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="stone" style="--accent:#d6a46b; --glow:rgba(183,119,61,.4)">
+        <span class="card-icon">◆</span><span class="card-index">07</span><span class="card-name">Stone</span><span class="card-type">Might · Core</span><span class="card-line"></span>
+      </button>
+      <button class="power-card" data-power="cosmos" style="--accent:#ff9acb; --glow:rgba(237,102,172,.38)">
+        <span class="card-icon">✧</span><span class="card-index">08</span><span class="card-name">Cosmos</span><span class="card-type">Infinity · Star</span><span class="card-line"></span>
+      </button>
+    </section>
+
+    <section class="selection-panel">
+      <div class="selection-copy"><span class="mini-label">SELECTED ASPECT</span><h2 id="power-title">Fire <span>·</span> Ember</h2><p id="power-description">A volatile force born from the first spark. Strike with overwhelming heat and leave only glowing cinders behind.</p><div class="stats"><div><span>CONTROL</span><i><b id="control-bar"></b></i></div><div><span>INTENSITY</span><i><b id="intensity-bar"></b></i></div></div></div>
+      <button class="awaken-button" id="awaken-button"><span>AWAKEN POWER</span><strong>→</strong></button>
+    </section>
+    <footer><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>THE ELEMENTS ARE WAITING</span></footer>
+  </main>
+  <div class="toast" id="toast">Fire awakened</div>
+  <script src="app.js"></script>
+</body>
+</html>
